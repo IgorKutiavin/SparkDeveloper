@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/SparkDeveloper.iml" filepath="$PROJECT_DIR$/SparkDeveloper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.iml" filepath="$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.main.iml" filepath="$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.myspark-build.iml" filepath="$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.myspark-build.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.test.iml" filepath="$PROJECT_DIR$/mySpark/.idea/modules/mySpark/myspark.test.iml" />
+    </modules>
+  </component>
+</project>
