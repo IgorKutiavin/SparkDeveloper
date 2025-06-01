@@ -6,25 +6,15 @@ case class taxiData (
                       Zone: String,
                       service_zone: String,
                     )
-object taxiData {
+object TaxiData {
 
-  def getData(s: String):taxiData = {
+  def apply(s: String):taxiData = {
     val a = s.split(",")
-//    if(a.length == 4)
-//      {
         taxiData(
           a(0).toInt,
           a(1),
           a(2),
           a(3))
- //     } else {
- //     taxiData(
- //       -1,
- //       "",
- //       "",
- //       "")
- //
- //   }
   }
 
   def getKey(s: String): Int = {

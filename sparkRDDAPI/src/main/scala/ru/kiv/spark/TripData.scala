@@ -1,33 +1,6 @@
 package ru.kiv.spark
 
-import com.fasterxml.jackson.module.scala.ScalaObjectMapper
-import org.apache.hadoop.shaded.org.codehaus.jackson.map.ObjectMapper
-import org.joda.time
 import org.joda.time.DateTime
-
-import java.time.format.DateTimeFormatter
-
-//case class tripData (
-//                      VendorID: Int,
-//                      tpep_pickup_datetime: String,
-//                      tpep_dropoff_datetime: String,
-//                      passenger_count: Int,
-//                      trip_distance: Double,
-//                      pickup_longitude: Double,
-//                      pickup_latitude: Double,
-//                      RatecodeID: Int,
-//                      store_and_fwd_flag: String,
-//                      dropoff_longitude: Double,
-//                      dropoff_latitude:Double,
-//                      payment_type: Int,
-//                      fare_amount:Double,
-//                      extra:Double,
-//                      mta_tax:Double,
-//                      tip_amount:Double,
-//                      tolls_amount:Double,
-//                      improvement_surcharge:Double,
-//                      total_amount:Double
-//                    )
 
 case class tripData (
                       VendorID: Int,
@@ -50,16 +23,13 @@ case class tripData (
                       congestion_surcharge:Double,
                       Airport_fee:Double
                    )
-object tripData {
+object TripData {
 
-  def getData(s: String):tripData = {
-    val datetime_format = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS")
+  def apply(s: String):tripData = {
     val a = s.split(",")
     if (a.length == 19) {
       tripData(
         a(0).toInt,
-//        DateTime.parse(datetime_format.parse(a(1).replace("T"," ")).toString),
-//        DateTime.parse(datetime_format.parse(a(2).replace("T"," ")).toString),
         DateTime.parse(a(1)),
         DateTime.parse(a(2)),
         a(3).toInt,
