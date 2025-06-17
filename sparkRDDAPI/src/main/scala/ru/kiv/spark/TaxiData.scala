@@ -1,6 +1,6 @@
 package ru.kiv.spark
 
-case class taxiData (
+case class TaxiData (
                       LocationID: Int,
                       Borough: String,
                       Zone: String,
@@ -8,9 +8,9 @@ case class taxiData (
                     )
 object TaxiData {
 
-  def apply(s: String):taxiData = {
+  def apply(s: String):TaxiData = {
     val a = s.split(",")
-        taxiData(
+        TaxiData(
           a(0).toInt,
           a(1),
           a(2),

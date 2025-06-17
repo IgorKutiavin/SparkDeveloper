@@ -2,7 +2,7 @@ package ru.kiv.spark
 
 import org.joda.time.DateTime
 
-case class tripData (
+case class TripData (
                       VendorID: Int,
                       tpep_pickup_datetime: DateTime,
                       tpep_dropoff_datetime:DateTime,
@@ -25,10 +25,10 @@ case class tripData (
                    )
 object TripData {
 
-  def apply(s: String):tripData = {
+  def apply(s: String):TripData = {
     val a = s.split(",")
     if (a.length == 19) {
-      tripData(
+      TripData(
         a(0).toInt,
         DateTime.parse(a(1)),
         DateTime.parse(a(2)),
