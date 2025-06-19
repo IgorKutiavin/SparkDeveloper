@@ -34,13 +34,9 @@ object SparkDataSetAPI {
         ,avg("trip_distance").as("avg_trip_distance")
         ,max("trip_distance").as("max_trip_distance")
         ,sqrt((col("min_trip_distance")+col("avg_trip_distance")+col("max_trip_distance"))/3).as("rmse_trip_distance"))
-
-//      .agg(min("trip_distance").as("min_trip_distance"))
-//      .agg(avg("trip_distance").as("avg_trip_distance"))
-//      .agg(max("trip_distance").as("max_trip_distance"))
-//      .agg(sqrt((col("min_trip_distance")+col("avg_trip_distance")+col("max_trip_distance"))/3).as("rmse_trip_distance"))
       .select(col("Zone"),col("CountTrip"),col("min_trip_distance").cast("decimal(10,2)"),col("avg_trip_distance").cast("decimal(10,2)"),col("max_trip_distance").cast("decimal(10,2)"),col("rmse_trip_distance").cast("decimal(10,2)"))
-//
-    dsRez.show(10)
+
+    dsRez.write
+      .parquet(args(2))
   }
 }
