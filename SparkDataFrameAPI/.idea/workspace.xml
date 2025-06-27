@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="505343c8-376d-4dc7-9be9-12e80612ca76" name="Changes" comment="Конфигурация приложения и итоговые файлы." />
+    <list default="true" id="505343c8-376d-4dc7-9be9-12e80612ca76" name="Changes" comment="Конфигурация приложения и итоговые файлы.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/SparkDataSetAPI.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/SparkDataSetAPI.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiRoad.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiRoad.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiZone.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiZone.scala" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -48,7 +53,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/igor/Spark/Developer/SparkDeveloper-master/lesson-12/Dataset/SparkDatasetAPI&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/igor/Spark/Developer/Project-Igor/SparkDeveloper/SparkDataFrameAPI&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.5071259&quot;
