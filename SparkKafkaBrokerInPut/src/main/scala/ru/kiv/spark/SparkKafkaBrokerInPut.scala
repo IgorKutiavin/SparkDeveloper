@@ -1,11 +1,8 @@
 package ru.kiv.spark
 
 import com.typesafe.config.ConfigFactory
-import org.apache.spark.ml.PipelineModel
-import org.apache.spark.sql.functions._
 import org.apache.spark.sql.{DataFrame, SparkSession}
-import org.slf4j.impl.StaticLoggerBinder
-import org.apache.log4j.{Level, Logger}
+import org.apache.spark.sql.types.StructType
 
 object SparkKafkaBrokerInPut {
 
@@ -13,35 +10,41 @@ object SparkKafkaBrokerInPut {
 
     val config                 = ConfigFactory.load()
     val pathCSVFile            = config.getString("path_csv_file")
-    //val inputBootstrapServers  = config.getString("input.bootstrap.servers")
-    //val inputTopic             = config.getString("input.topic")
-    val outputBootstrapServers = config.getString("output.bootstrap.servers")
-    val outputTopic            = config.getString("output.topic")
-    //val path2model             = config.getString("path2model")
-    //val checkpointLocation     = config.getString("checkpointLocation")
-
-    //import spark.implicits._
+    val inputBootstrapServers  = config.getString("input.bootstrap.servers")
+    val inputTopic             = config.getString("input.topic")
+    val checkPointParh         = config.getString("checkpoint_path")
+    val csvPath                = config.getString("csv_files_path")
 
     val spark = SparkSession.builder
       .appName("SparkKafkaBrokerInPut")
       .master("local[*]")
       .getOrCreate()
 
-    val df = spark.read
+    val Bestsellers = new StructType()
+      .add("name", "string")
+      .add("Author", "string")
+      .add("User Rating", "double")
+      .add("Reviews", "integer")
+      .add("Price", "integer")
+      .add("Year", "integer")
+      .add("Genre", "string")
+
+    val df = spark.readStream
       .option("header", "true") // Если первая строка - заголовок
       .option("inferSchema", "true") // Автоматическое определение типов данных
       .option("delimiter", ",") // Разделитель, по умолчанию - запята
-      .csv(pathCSVFile)
+      .schema(Bestsellers)
+      .csv(csvPath)
 
-    val json = df.toJSON
-    json.show(10)
 
-    val query = json.select(col("value")).writeStream
-      .format("kafka")
+    val js = df.toJSON
+
+    val query = js.writeStream
       .outputMode("append")
       .format("kafka")
-      .option("kafka.bootstrap.servers", outputBootstrapServers)
-      .option("topic", outputTopic)
+      .option("kafka.bootstrap.servers", inputBootstrapServers)
+      .option("topic", inputTopic)
+      .option("checkpointLocation", checkPointParh)
       .start()
 
     query.awaitTermination()

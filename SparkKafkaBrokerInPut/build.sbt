@@ -7,8 +7,8 @@ lazy val root = (project in file("."))
     name := "SparkKafkaBrokerInPut"
   )
 
-lazy val sparkVersion = "3.4.1"
-lazy val kafkaVersion = "3.4.0"
+lazy val sparkVersion = "3.5.5"
+lazy val kafkaVersion = "3.5.0"
 
 libraryDependencies ++= Seq(
   "com.typesafe"      % "config"                    % "1.4.2",
