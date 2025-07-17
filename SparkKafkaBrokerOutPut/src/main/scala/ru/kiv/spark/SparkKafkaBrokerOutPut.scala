@@ -19,12 +19,23 @@ object SparkKafkaBrokerOutPut {
       .master("local[*]")
       .getOrCreate()
 
+    import spark.implicits._
+
     val df = spark.readStream
       .format("kafka")
       .option("kafka.bootstrap.servers", outputBootstrapServers)
       .option("subscribe", outputTopic)
       .load()
+      .selectExpr("cast(value as String)")
+      .as[String]
 
-    df.show(10)
+//    df.printSchema()
+//    df.writeStream
+//      .option("checkpointLocation", checkPointParh)
+//      .format("parquet")
+//      .toTable("userRaiting")
+//      .awaitTermination()
+
+    spark.read.table("userraiting").show(10)
   }
 }

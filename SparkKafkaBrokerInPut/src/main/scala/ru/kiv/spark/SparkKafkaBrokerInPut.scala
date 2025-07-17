@@ -38,6 +38,7 @@ object SparkKafkaBrokerInPut {
 
 
     val js = df.toJSON
+    js.printSchema()
 
     val query = js.writeStream
       .outputMode("append")
