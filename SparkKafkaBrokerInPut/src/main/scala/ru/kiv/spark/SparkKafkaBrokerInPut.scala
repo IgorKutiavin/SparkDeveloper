@@ -9,7 +9,6 @@ object SparkKafkaBrokerInPut {
   def main(args: Array[String]): Unit = {
 
     val config                 = ConfigFactory.load()
-    val pathCSVFile            = config.getString("path_csv_file")
     val inputBootstrapServers  = config.getString("input.bootstrap.servers")
     val inputTopic             = config.getString("input.topic")
     val checkPointParh         = config.getString("checkpoint_path")
@@ -40,6 +39,12 @@ object SparkKafkaBrokerInPut {
     val js = df.toJSON
     js.printSchema()
 
+//    js.writeStream
+//      .outputMode("append")
+//      .format("console")
+//      .start()
+//      .awaitTermination()
+
     val query = js.writeStream
       .outputMode("append")
       .format("kafka")
@@ -48,6 +53,6 @@ object SparkKafkaBrokerInPut {
       .option("checkpointLocation", checkPointParh)
       .start()
 
-    query.awaitTermination()
+    query.awaitTermination(10000)
   }
 }
