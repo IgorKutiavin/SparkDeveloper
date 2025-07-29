@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="505343c8-376d-4dc7-9be9-12e80612ca76" name="Changes" comment="Конфигурация приложения и итоговые файлы.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/SparkDataSetAPI.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/SparkDataSetAPI.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiRoad.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiRoad.scala" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiZone.scala" beforeDir="false" afterPath="$PROJECT_DIR$/../SparkDataSetAPI/src/main/scala/ru/kiv/spark/TaxiZone.scala" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.sbt" beforeDir="false" afterPath="$PROJECT_DIR$/build.sbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkKafkaBrokerInPut/src/main/resources/best_json.jsn/.part-00000-56bf24b5-096a-4f43-9b5a-fded3b78b936-c000.txt.crc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkKafkaBrokerInPut/src/main/resources/best_json.jsn/part-00000-56bf24b5-096a-4f43-9b5a-fded3b78b936-c000.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkKafkaBrokerInPut/src/main/resources/bestsellers with categories.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../SparkKafkaBrokerInPut/src/main/resources/reference.conf" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,20 +48,37 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.SparkDataFrameAPI.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/igor/Spark/Developer/Project-Igor/SparkDeveloper/SparkDataFrameAPI&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5071259&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SparkDataFrameAPI.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "ScalaTest.DataFrameAPITest.executor": "Run",
+    "ScalaTest.DataFrameAPITest.should contain all necessary columns.executor": "Run",
+    "ScalaTest.DataFrameAPITest.should return correct interaction list.executor": "Run",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/igor/Spark/Developer/Project-Igor/SparkDeveloper/SparkDataFrameAPI/src/main/test/resources",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5071259"
   }
-}</component>
-  <component name="RunManager">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/test/resources" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/test/scala/ru/kiv/spark" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="ru.kiv.spark" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
+  <component name="RunManager" selected="ScalaTest.DataFrameAPITest">
     <configuration name="SparkDataFrameAPI" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -70,12 +89,105 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DataFrameAPITest" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="SparkDataFrameAPI" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envFilePaths">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Class" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="testClassPath" value="ru.kiv.spark.DataFrameAPITest" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataFrameAPITest.should contain all necessary columns" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="SparkDataFrameAPI" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envFilePaths">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="testClassPath" value="ru.kiv.spark.DataFrameAPITest" />
+      <option name="testName" value="should contain all necessary columns" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DataFrameAPITest.should return correct interaction list" type="ScalaTestRunConfiguration" factoryName="ScalaTest" temporary="true" nameIsGenerated="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <module name="SparkDataFrameAPI" />
+      <option name="VMParameters" value="" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="classpathModifications">
+        <list />
+      </option>
+      <option name="envFilePaths">
+        <list />
+      </option>
+      <option name="envs">
+        <map />
+      </option>
+      <option name="passParentEnvs" value="true" />
+      <option name="programParameters" value="" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="testKind" value="Test name" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <option name="testClassPath" value="ru.kiv.spark.DataFrameAPITest" />
+      <option name="testName" value="should return correct interaction list" />
+      <option name="workingDirectory" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="ScalaTest.DataFrameAPITest" />
+        <item itemvalue="ScalaTest.DataFrameAPITest.should return correct interaction list" />
+        <item itemvalue="ScalaTest.DataFrameAPITest.should contain all necessary columns" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ScalaProjectSettings">
     <option name="migrateConfigurationsNotificationShown" value="true" />
-  </component>
-  <component name="ShouldUpdateRunConfigurations">
-    <option name="isDowngrading" />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
