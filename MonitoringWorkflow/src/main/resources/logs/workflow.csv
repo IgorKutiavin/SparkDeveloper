@@ -1,0 +1,29 @@
+"wf_desc";"wf_enabled_flg";"wf_id";"wf_nme_unq";"wf_typ";"_tech_exec_job_id";"_tech_load_dt"
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;true;748677972;wf_[postgresql]_[tsd_knp]_[camsdata]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[full_179];DATA;"863133237";2025-08-18 14:56:58.000
+Поток загрузки Данных о данных налоговых деклараций ресурса КНП из Oracle ETL1 из слоя дельт ОД в слой сырых данных;false;540245578;wf_SKUAD_HIVE_DL_DELTA_2_HIVE_DL_RAW_CAMsKNP_02_incr;CONTAINER;"863133237";2025-08-18 14:56:58.000
+Поток загрузки сведений о Камеральных налоговых проверках из oracle ETL1 в ОД слой сырых данных;true;7505842;wf_DFL_CAMsKNP_2_HIVE_DL_RAW_etl1_incr;DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки данных для базовой витрины в Озере данных по КНД 1151095 Акцизы на нефтяное сырьё из слоя DL_RAW Hive в слой DL_TM Hive;true;233611589;wf_TM_HIVE_DL_RAW_2_DL_TM_T1151095_full;DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;true;765695847;wf_[adh3_hive]_[dp_dsb]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[full_t97_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки данных для базовой спецвитрины по ВБР по КНД 1110012 Лицензии ОЖМ в ОД из слоя DL_RAW Hive в слой DL_TM Hive;true;233613281;wf_TM_HIVE_DL_RAW_2_HIVE_DL_TM_T1110012_full;DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;false;633429991;wf_SKUAD_TSD_EXADATA_CAMsDATA_2_HIVE_DL_RAW_full_T251;DATA;"863133237";2025-08-18 14:56:58.000
+"Поток загрузки из схемы ""CAM$KNP"" БД Oracle Exadata сведений о Камеральных налоговых проверках";true;748689958;wf_[postgresql]_[tsd_knp]_[camsknp]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[large_full];DATA;"863133237";2025-08-18 14:56:58.000
+Поток полной загрузки Данных о данных налоговых деклараций ресурса КНП из Oracle Exadata в слой сырых данных ОД;false;540245592;wf_SKUAD_TSD_EXADATA_CAMsKNP_2_HIVE_DL_RAW_large_tables_full_02;DATA;"863133237";2025-08-18 14:56:58.000
+"Поток загрузки из схемы ""CAM$KNP"" БД Oracle Exadata сведений о Камеральных налоговых проверках";false;7491513;wf_DFL_EXADATA_CAMsKNP_2_hive_dl_raw_large_full;DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;false;765675353;wf_[adh3_hive]_[dp_dsb]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[full_camsnbo_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;true;765684170;wf_[adh3_hive]_[dp_dsb]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[full_t251_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки актуальных данных из слоя DL_TM по КНД 1151072;true;221222821;wf_TM_HIVE_DL_TM_2_ADB_TM_ISCAM_VSSOI_VODNAL_full;DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;true;765700725;wf_[adh3_hive]_[dp_dsb]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[large_full_camsknp_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;true;748687174;wf_[postgresql]_[tsd_knp]_[camsdata]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[full_t251];DATA;"863133237";2025-08-18 14:56:58.000
+"Поток загрузки из схемы ""CAM$NBO"" БД Oracle Exadata сведений о налоговой отчётности";false;748691119;wf_[postgresql]_[tsd_knp]_[camsnbo]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[full];DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;true;765640390;wf_[adh3_hive]_[dp_dsb]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[full_t557_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки из слоя DL_TM Hive в слой ISCAM ADB TM спецвитрины по КНД 1110012 ЖМ;true;205233345;wf_TM_HIVE_DL_TM_2_ADB_TM_ISCAM_VSSOI_LIC_ZHM_full;DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;true;752892945;wf_[postgresql]_[tsd_knp]_[camsdata]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[full_t97];DATA;"863133237";2025-08-18 14:56:58.000
+Поток для копирования данных из ADH3 в ADH1;true;765618342;wf_[adh3_hive]_[tsd_knp]_[dl_raw]_2_[adh1_hive]_[dp_dsb]_[dl_raw]_[full_179_copy_data];DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;false;633419671;wf_SKUAD_TSD_EXADATA_CAMsDATA_2_HIVE_DL_RAW_full_T97;DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;false;627579141;wf_SKUAD_TSD_EXADATA_CAMsDATA_2_HIVE_DL_RAW_full_T557;DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;false;344362175;wf_SKUAD_TSD_EXADATA_CAMsDATA_2_HIVE_DL_RAW_full_179;DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки из слоя DL_TM Hive в слой ISCAM ADB TM спецвитрины по КНД 1151095 Акцизы на нефтяное сырьё;true;221222599;wf_TM_HIVE_DL_TM_2_ADB_TM_ISCAM_VSSOI_AKCIZ_1151095_full;DATA;"863133237";2025-08-18 14:56:58.000
+Воркфлоу загрузки данных о налоговых декларациях ресурса КНП из Oracle Exadata в сырой слой ОД;true;752885890;wf_[postgresql]_[tsd_knp]_[camsdata]_2_[adh3_hive]_[dp_dsb]_[dl_raw]_[full_t557];DATA;"863133237";2025-08-18 14:56:58.000
+"Поток загрузки из схемы ""CAM$NBO"" БД Oracle Exadata сведений о налоговой отчётности";true;7491551;wf_DFL_EXADATA_CAMsNBO_2_hive_dl_raw_full;DATA;"863133237";2025-08-18 14:56:58.000
+Поток инкрементальной загрузки Данных о данных налоговых деклараций ресурса КНП из Oracle ETL1 в слой дельт ОД;false;540245536;wf_SKUAD_ETL1_ORACLE_DL_BUFFER_2_HIVE_DL_DELTA_CAMsKNP_full_02;DATA;"863133237";2025-08-18 14:56:58.000
+Поток заливки актуальных данных из слоя DL_RAW по КНД 1151072;true;233592267;wf_TM_HIVE_DL_RAW_2_HIVE_DL_TM_T1151072_DOCUMENT_full;DATA;"863133237";2025-08-18 14:56:58.000
