@@ -20,7 +20,7 @@ object Dependency {
 //  }
 //
 //
-  def obj_depend (ds: Dataset[Dependency])(implicit spark: SparkSession): DataFrame = {
+  def apply (ds: Dataset[Dependency])(implicit spark: SparkSession): DataFrame = {
 
     import spark.implicits._
 
@@ -70,7 +70,7 @@ object Dependency {
   def parse_tbl (p: String):String = {
     import scala.util.matching.Regex
 
-    val pr:Regex = """.*__([0-9a-zA-Z-_]+)__([0-9a-zA-Z-_]+)""".r
+    val pr:Regex = """.*__([0-9a-zA-Z-_$]+)__([0-9a-zA-Z-_$]+)""".r
 
     p match{
       case pr(sh,tbl) => s"$sh.$tbl"

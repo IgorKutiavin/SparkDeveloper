@@ -22,11 +22,17 @@ object MonitoringWorkflow {
       .csv("src/main/resources/logs/parent_wf_operation_list.csv")
       .as[Dependency].persist()
 
-    val obj_dependency = Dependency.obj_depend(link_param)(spark)
-
+    val obj_dependency = Dependency(link_param)(spark)
     obj_dependency.printSchema()
-    obj_dependency.show(false)
-    println(obj_dependency.count())
+    //obj_dependency.where("tbl_trg in ('i$cam.v$soi_vodnal','i$cam.v$soi_akciz_1151095','i$cam.v$soi_lic_zhm')").show(false)
+
+    val l = """i$cam.v$soi_vodnal,i$cam.v$soi_akciz_1151095,i$cam.v$soi_lic_zhm""".split(",").toList
+
+    val listTbl = TableCalc(obj_dependency, l)(spark)
+
+    listTbl.printSchema()
+    listTbl.orderBy("tbl_calc_nme","dependency_lvl").show(false)
+    println(listTbl.count())
 
 
   }
