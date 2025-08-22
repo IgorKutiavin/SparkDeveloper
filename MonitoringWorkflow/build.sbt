@@ -14,6 +14,7 @@ lazy val log4jVersion = "2.22.1"
 
 ThisBuild / libraryDependencies ++= Seq(
   "org.apache.spark" %% "spark-sql" % sparkVersion,
+  "com.typesafe" % "config" % "1.4.2"
 //  "com.fasterxml.jackson.core" % "jackson-core" % "2.16.1",
 //  "org.scalatest" %% "scalatest" % "3.2.17" % "test",
 //  "com.github.mrpowers" %% "spark-fast-tests" % "1.3.0" % "test",

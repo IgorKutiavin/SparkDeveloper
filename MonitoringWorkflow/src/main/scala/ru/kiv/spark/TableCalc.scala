@@ -52,7 +52,7 @@ object TableCalc {
           acc_ds.union(ds)
         }
 
-      if (lvl < 5) {
+      if (lvl <= 5) {
         rollUp(in_ds, ds_out, lvl + 1)
       }
       else
