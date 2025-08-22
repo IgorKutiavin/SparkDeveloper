@@ -84,7 +84,7 @@ object MonitoringWorkflow {
         col("rls_stus").as("tsk_status"),
         col("tbl_src").as("src_tbl_nme"),
         col("tbl_trg").as("trg_tbl_nme"),
-        col("dependency_lvl"))
+        col("dependency_lvl")).distinct()
 
     //obj_dep.orderBy("tbl_calc_nme","dependency_lvl").show(false)
     //obj_dep.select("tbl_calc_nme","dependency_lvl").distinct().orderBy("tbl_calc_nme","dependency_lvl").show(false)
