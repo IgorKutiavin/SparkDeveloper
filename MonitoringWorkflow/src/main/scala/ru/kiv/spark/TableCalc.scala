@@ -30,8 +30,6 @@ object TableCalc {
 
     import spark.implicits._
 
-    df.printSchema()
-
     val dep_lvl = 1
     val ds = df.withColumn("tbl_calc_nme", col("tbl_trg"))
     .as[TableCalc]
@@ -43,7 +41,7 @@ object TableCalc {
 
     @tailrec
     def rollUp(in_ds: Dataset[TableCalc], acc_ds: Dataset[TableDepend], lvl: Int): DataFrame = {
-        println(s"dependency_lvl: $lvl")
+
         val ds = in_ds.as("o").joinWith(acc_ds.as("p"), col("o.param_val_trg") === col("p.param_val_src"), joinType = "inner")
           .map(p => TableDepend(p._2.tbl_calc_nme, p._1.entity_name, p._1.tbl_trg, p._1.tbl_src, p._1.param_val_trg, p._1.param_val_src, p._1.tbl_trg_host, lvl))
         val ds_out = if (lvl == 1) {
